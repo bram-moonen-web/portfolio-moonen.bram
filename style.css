@@ -1,0 +1,271 @@
+/* ==================================
+   STYLE.CSS - VERSION COMPLÈTE
+   ================================== */
+
+/* ==================================
+   1. VARIABLES (Tes choix de design)
+   ================================== */
+:root {
+    /* Tu peux changer ces couleurs quand tu veux ! */
+    --couleur-principale: #007bff;   /* Un bleu "tech" (pour les titres, boutons) */
+    --couleur-secondaire: #2c3e50; /* Un bleu-nuit/gris (pour la barre nav) */
+    
+    /* C'est ça, tes "rectangles de contraste" ! */
+    --couleur-fond: #f8f9fa;       /* FOND DE LA PAGE (ton "blanc clair") */
+    --couleur-fond-contenu: #ffffff; /* FOND DU CONTENU (ton "blanc foncé"/rectangle) */
+    
+    --couleur-texte: #333333;      /* Texte principal (sombre) */
+    --couleur-texte-inverse: #ffffff; /* Texte sur les fonds foncés (blanc) */
+    
+    /* Ta police arrondie */
+    --police-principale: 'Nunito', sans-serif;
+}
+
+
+/* ==================================
+   2. STYLE GÉNÉRAL (Le look de base)
+   ================================== */
+body {
+    font-family: var(--police-principale);
+    margin: 0;
+    padding: 0;
+    background-color: var(--couleur-fond); /* FOND GRIS CLAIR */
+    color: var(--couleur-texte);      
+}
+
+h1, h2, h3 {
+    color: var(--couleur-principale); /* Titres en couleur principale */
+}
+
+/* ==================================
+   3. HEADER ET NAVIGATION (Ta "barre du milieu")
+   ================================== */
+header {
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-texte-inverse);
+    padding: 1rem 0; /* Espace en haut/bas de la barre */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Petite ombre sous la barre */
+}
+
+nav ul {
+    list-style: none; /* Enlève les puces */
+    padding: 0;
+    margin: 0;
+    text-align: center; /* <<< C'EST ÇA QUI CENTRE TES LIENS ! */
+}
+
+nav ul li {
+    display: inline; /* Met les liens sur la même ligne */
+    margin: 0 20px; /* Espace entre les liens */
+}
+
+nav ul li a {
+    color: var(--couleur-texte-inverse);
+    text-decoration: none; /* Enlève le soulignement */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Effet doux au survol */
+}
+
+/* Effet au survol des liens */
+nav ul li a:hover {
+    color: var(--couleur-principale); /* Le lien devient bleu au survol */
+}
+
+
+/* ==================================
+   4. LE CONTENU (Ton "rectangle blanc")
+   ================================== */
+main {
+    /* C'est ton "rectangle" blanc ! */
+    display: block;
+    max-width: 900px; /* Largeur max du contenu */
+    
+    /* 'auto' à gauche/droite le centre sur la page */
+    margin: 30px auto; /* 30px d'espace en haut/bas */
+    
+    padding: 25px; /* Espace À L'INTÉRIEUR du rectangle */
+    background-color: var(--couleur-fond-contenu); /* FOND BLANC */
+    border-radius: 8px; /* Coins arrondis (plus moderne) */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Ombre très légère */
+}
+    
+/* Améliore la lisibilité des paragraphes dans le rectangle */
+main p {
+    line-height: 1.7; /* Espace entre les lignes (très important !) */
+    font-size: 1.1rem; /* Texte un peu plus grand */
+}
+
+/* ==================================
+   5. BOUTON "PEPS" (Call To Action)
+   ================================== */
+.bouton-cta {
+    display: inline-block;
+    background-color: var(--couleur-principale); 
+    color: var(--couleur-texte-inverse);
+    padding: 12px 25px; 
+    border-radius: 25px; /* Le look "pilule" arrondie */
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--police-principale); 
+    transition: all 0.3s ease; /* Transition douce sur tout */
+    margin-top: 15px; /* Espace au-dessus du bouton */
+}
+
+.bouton-cta:hover {
+    background-color: var(--couleur-secondaire); /* Change de couleur au survol */
+    transform: translateY(-2px); /* Petit effet de "soulèvement" */
+}
+    
+/* ==================================
+   6. PIED DE PAGE (Footer)
+   ================================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777; /* Couleur discrète */
+    margin-top: 30px;
+}
+/* ==================================
+   9. PAGE CONTACT (Formulaire)
+   (Ajoute ça à la fin de style.css)
+   ================================== */
+
+/* On centre la section sur la page */
+#contact-form {
+    max-width: 700px;
+    margin: 0 auto; /* Centre horizontalement */
+}
+
+/* On centre les titres */
+#contact-form h2,
+#contact-form p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Chaque "bloc" (label + input) */
+.form-groupe {
+    margin-bottom: 20px;
+}
+
+.form-groupe label {
+    display: block; /* Le label prend toute la largeur */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--couleur-secondaire);
+}
+
+/* Style pour les champs de texte et le grand message */
+.form-groupe input[type="text"],
+.form-groupe input[type="email"],
+.form-groupe textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Coins arrondis, comme le reste */
+    font-family: var(--police-principale); /* Ta police Nunito */
+    font-size: 1rem;
+    
+    /* Petite astuce pour que le padding ne casse pas la largeur */
+    box-sizing: border-box; 
+}
+
+/* Le bouton d'envoi */
+.form-groupe button {
+    border: none; /* Le bouton n'a pas besoin de bordure */
+    cursor: pointer; /* Montre une main au survol */
+}
+/* ==================================
+   10. FOOTER & ICÔNES SOCIALES
+   (Ajoute ça à la fin de style.css)
+   ================================== */
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--couleur-secondaire); /* Fond sombre, comme le header */
+    color: #aaa; /* Couleur du texte de copyright (gris clair) */
+    margin-top: 40px;
+}
+
+.footer-social {
+    margin-bottom: 15px; /* Espace entre les icônes et le copyright */
+}
+
+/* Style de chaque icône */
+.social-icon {
+    margin: 0 15px; /* Espace entre les icônes */
+    color: var(--couleur-texte-inverse); /* Couleur de l'icône (blanc) */
+    text-decoration: none; /* Enlève le soulignement */
+    font-size: 2rem; /* Augmente la taille de l'icône (2rem = 2x la taille normale) */
+    
+    transition: color 0.3s ease; /* Effet de transition doux */
+}
+
+/* Effet au survol */
+.social-icon:hover {
+    color: var(--couleur-principale); /* Change en bleu au survol */
+}
+/* ==================================
+   11. SECTION ACCUEIL (Avec photo)
+   (Ajoute ça à la fin de style.css)
+   ================================== */
+
+#accueil {
+    /* Ajoute un peu de padding en bas pour aérer */
+    padding-bottom: 50px; 
+}
+
+/* Conteneur principal pour le texte ET la photo */
+.accueil-content {
+    display: flex; /* Met le texte et la photo côte à côte */
+    align-items: center; /* Centre verticalement les deux éléments */
+    justify-content: center; /* Centre horizontalement l'ensemble */
+    gap: 40px; /* Espace entre la photo et le texte */
+    
+    max-width: 900px; /* Limite la largeur du contenu */
+    margin: 0 auto; /* Centre le conteneur */
+}
+
+/* La partie texte */
+.accueil-texte {
+    flex: 2; /* Prend plus de place que la photo */
+    text-align: left; /* Aligne le texte à gauche */
+}
+
+/* La partie photo */
+.accueil-photo {
+    flex: 1; /* Prend une part de l'espace */
+    text-align: center; /* Centre la photo si elle est plus petite */
+}
+
+.accueil-photo img {
+    width: 200px; /* Taille fixe pour l'image (adapte si besoin) */
+    height: 200px; /* Hauteur fixe */
+    border-radius: 50%; /* <<<<< C'EST ÇA QUI REND L'IMAGE RONDE ! */
+    object-fit: cover; /* Recadre l'image pour qu'elle remplisse le cercle */
+    border: 5px solid var(--couleur-principale); /* Bordure colorée autour */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Petite ombre */
+}
+
+/* ==================================
+   12. Responsive Design pour les Mobiles (TRÈS IMPORTANT !)
+   ================================== */
+
+/* Quand l'écran est petit (ex: téléphone), les éléments passent les uns sous les autres */
+@media (max-width: 768px) {
+    .accueil-content {
+        flex-direction: column; /* La photo passe au-dessus du texte */
+        text-align: center; /* Centre tout le texte */
+    }
+
+    .accueil-texte,
+    .accueil-photo {
+        flex: none; /* Enlève la flexibilité */
+        width: 100%; /* Reprend toute la largeur */
+    }
+
+    .accueil-texte h1 {
+        margin-top: 20px; /* Espace entre la photo et le titre */
+    }
+}
