@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail Projet - Thermomètre Bébé</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* On garde le style global de ta page Hackathon, on ajoute juste la timeline */
+        .timeline {
+            list-style: none;
+            padding-left: 30px;
+            border-left: 3px solid #1565c0; /* La ligne bleue verticale */
+            margin-left: 10px;
+        }
+
+        .timeline li {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        /* Les points sur la frise */
+        .timeline li::before {
+            content: '';
+            position: absolute;
+            left: -39px; /* Ajustement pour centrer sur la ligne */
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: white;
+            border: 3px solid #1565c0;
+            border-radius: 50%;
+        }
+
+        .timeline strong {
+            color: #1565c0;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li> 
+                <li><a href="projets.html" class="active">Mes Projets</a></li> 
+                <li><a href="contact.html">Contact</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="projet-intro" style="padding: 50px 10%; text-align: center;">
+            <div class="accueil-texte">
+                <h1>Thermomètre de Bain pour Bébé</h1>
+                <h3 style="color: #1565c0; margin-top: 15px;">Projet SAE 1.1 • Électronique Analogique & Conception PCB</h3>
+                
+                <p style="margin-top: 20px; max-width: 900px; margin: 20px auto;">
+                    Conception d'un dispositif de sécurité autonome pour surveiller la température du bain (Cible : 37°C).
+                    Un projet réalisé en <strong>électronique pure</strong> (sans Arduino), de la conception du schéma jusqu'à la fabrication de la carte.
+                </p>
+
+                <a href="projets.html" style="display: inline-block; margin-top: 30px; text-decoration: none; color: #333; font-weight: bold; border: 1px solid #333; padding: 10px 20px; border-radius: 5px;">
+                    <i class="fa-solid fa-arrow-left"></i> Retour aux projets
+                </a>
+            </div>
+        </section>
+
+        <section style="padding: 40px 10%; display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+            
+            <div style="flex: 1; min-width: 300px;">
+                <img src="CARTE%20TDB.png" alt="Carte électronique du thermomètre" style="width: 100%;">
+                <p style="text-align: center; font-size: 1em; color: #666; margin-top: 10px;">Carte électronique fabriquée à l'IUT</p>
+            </div>
+
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="margin-bottom: 20px;">Contexte & Fonctionnement</h2>
+                <p>
+                    <strong>Le besoin :</strong> Concevoir un dispositif capable d'alerter les parents si l'eau est trop chaude ou trop froide.
+                </p>
+                <br>
+                <p>
+                    <strong>Fonctionnement technique :</strong>
+                </p>
+                <ul style="margin-top: 10px; margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Capteur :</strong> Utilisation d'une Thermistance CTN (la résistance varie avec la température).</li>
+                    <li><strong>Traitement :</strong> Circuit analogique avec AOP (Comparateurs) pour analyser la tension.</li>
+                    <li><strong>Interface :</strong> 3 LEDs (Bleue < 36°C, Verte = 37°C, Rouge > 38°C).</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section style="padding: 40px 10%; display: flex; flex-wrap: wrap-reverse; align-items: flex-start; gap: 50px; background-color: #f4f4f4;">
+            
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="margin-bottom: 20px;">Étapes de Réalisation</h2>
+                <p style="margin-bottom: 20px;">Nous avons suivi un cycle de développement industriel :</p>
+                
+                <ul class="timeline">
+                    <li>
+                        <strong>Analyse & Calculs</strong><br>
+                        Étude des datasheets, calculs théoriques et dimensionnement des composants pour le pont diviseur.
+                    </li>
+                    <li>
+                        <strong>Simulation (Proteus)</strong><br>
+                        Validation du schéma électrique et conception du typon (PCB) sur le logiciel ISIS.
+                    </li>
+                    <li>
+                        <strong>Fabrication & Câblage</strong><br>
+                        Fabrication de la carte à l'IUT (insoleuse, graveuse) puis soudure des composants.
+                    </li>
+                    <li>
+                        <strong>Tests & Étalonnage</strong><br>
+                        Vérification aux instruments (Ohmmètre, Ampèremètre) et validation finale en enceinte thermique (four).
+                    </li>
+                </ul>
+            </div>
+
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="margin-bottom: 20px;">Bilan Personnel</h2>
+                <p>
+                    Ce projet m'a permis de voir la chaîne complète de création d'un produit : du calcul théorique jusqu'à la fabrication physique du PCB.
+                </p>
+                <br>
+                <p>
+                    J'ai particulièrement apprécié l'étape de <strong>soudure et de fabrication</strong>, car c'est là que le projet est devenu concret. Cela m'a aussi appris l'importance de la simulation : valider sur ISIS avant de fabriquer évite bien des erreurs coûteuses.
+                </p>
+            </div>
+
+        </section>
+
+        <section id="competences" style="padding-bottom: 60px;">
+            <h2 style="text-align: center; margin: 40px 0;">Technologies & Outils</h2>
+            
+            <div class="competences-container">
+                
+                <div class="categorie-competence">
+                    <h3>📐 Conception</h3>
+                    <ul>
+                        <li>Logiciel <strong>ISIS (Proteus)</strong></li>
+                        <li>Design de PCB (Typon)</li>
+                        <li>Simulation électronique</li>
+                    </ul>
+                </div>
+                
+                <div class="categorie-competence">
+                    <h3>⚡ Électronique</h3>
+                    <ul>
+                        <li>Analogique (Sans Arduino)</li>
+                        <li>AOP & Comparateurs</li>
+                        <li>Capteurs (CTN)</li>
+                    </ul>
+                </div>
+
+                <div class="categorie-competence">
+                    <h3>🛠️ Fabrication</h3>
+                    <ul>
+                        <li>Gravure de carte (CI)</li>
+                        <li>Soudure de composants</li>
+                        <li>Mesures (Multimètre)</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/bram-moonen-433009344" target="_blank" class="social-icon">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            
+            <a href="mailto:bram.mnn@gmail.com" class="social-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+        
+        <p>© 2025 - MOONEN Bram. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
