@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,91 +12,249 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
-<body>
+
+<body class="homepage">
+    <!-- Bouton Toggle Dark Mode -->
+    <button id="theme-toggle" aria-label="Basculer le mode sombre">🌙</button>
+
+    <div id="intro-overlay">
+        <div class="intro-text">
+            <span class="nom">
+                <span style="--i:1">M</span><span style="--i:2">O</span><span style="--i:3">O</span><span
+                    style="--i:4">N</span><span style="--i:5">E</span><span style="--i:6">N</span>
+            </span>
+            <span class="prenom">Bram</span>
+        </div>
+    </div>
 
     <header>
-      <nav>
-    <ul>
-        <li><a href="index.html">Accueil</a></li> 
-        <li><a href="projets.html">Mes Projets</a></li> 
-        <li><a href="contact.html">Contact</a></li> </ul>
-</nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Mes Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section id="accueil">
-         <div class="accueil-texte">
+            <div class="accueil-texte">
 
-         </div>   <h1>Bienvenue !</h1>
-            <p>Le code, c'est bien. Le voir piloter une machine, c'est mieux ! Étudiant en BUT GEII, je m'appelle MOONEN Bram et je réalise mon rêve : apprendre à m'attaquer à l'automatisme pour donner de l'intelligence au monde réel.</p>
-         </div>
-         <div class="accueil-photo"> <img src="PP-CLEAN.JPG" alt="Photo de profil de Bram Moonen">
-        </div>   
+            </div>
+            <h1>Bienvenue !</h1>
+            <p>Le code, c'est bien. Le voir piloter une machine, c'est mieux ! Étudiant en BUT GEII, je m'appelle MOONEN
+                Bram et je m'epanui dans ma formation en apprenant l'automatisme pour donner de l'intelligence au
+                monde réel.</p>
+
+            <!-- BOUTON CV -->
+            <a href="CV Moonen Bram.pdf" target="_blank" class="bouton-cta" style="margin-top: 20px;">
+                <i class="fa-solid fa-download"></i> Télécharger mon CV
+            </a>
+            </div>
+            <div class="accueil-photo"> <img src="PP-CLEAN.JPG" alt="Photo de profil de Bram Moonen">
+            </div>
         </section>
     </main>
     <main>
         <section id="a-propos">
             <h2>À propos de moi</h2>
-            <p>Piloter le réel, voilà ce qui me fait vibrer ! En tant qu'étudiant en BUT GEII à l'IUT de Gradignan, je ne suis pas juste là pour la théorie ou le code pur. Ce que j'aime, c'est le concret : quand le circuit s'allume, que le moteur tourne et que le système prend vie.
+            <p>Initié à l'électricité lors de travaux de rénovation familiale, j'ai voulu comprendre la technicité de ce
+                domaine en suivant un Bac Pro MELEC. Mais ce qui me fait vraiment vibrer, c'est de « piloter le réel ».
+                Mes stages m'ont révélé que l'automatisme est le lien parfait entre l'intelligence du code et la
+                puissance de l'énergie. Aujourd'hui en BUT GEII, je concrétise ce projet avec un objectif clair :
+                devenir Automaticien. Ce portfolio est mon labo, la preuve de ce que je construis. Jetez-y un œil !</p>
 
-Ma double passion ? L'automatisme pour l'intelligence, et l'énergie pour la puissance. Pour moi, l'un ne va pas sans l'autre ! Je veux maîtriser toute la chaîne : du système de contrôle qui donne l'ordre, jusqu'au circuit de puissance qui l'exécute.
-
-Je suis en mission : décrocher un stage de deuxième année. Je cherche une entreprise où je pourrai vraiment avoir les mains sur le matériel et contribuer à des défis techniques réels. Ce portfolio est mon labo, la preuve de ce que je construis. Jetez-y un œil !</p>
-    
-    </div> </section>
+            </div>
+        </section>
     </main>
     <main>
 
+        <section id="experiences">
+            <h2>Expériences Professionnelles</h2>
+            <div class="timeline-container">
+
+                <!-- 2. Ferme d'Escaiche (2022 & 2023) -->
+                <div class="timeline-card">
+                    <img src="CHAMPS.jpg" alt="Champs de maïs Ferme d'Escaiche" class="card-img">
+                    <div class="card-content">
+                        <h3>Ouvrier Agricole</h3>
+                        <span class="company">La Ferme d'Escaiche</span>
+                        <span class="date">Étés 2021 & 2022</span>
+                        <p>Castration de maïs semence. Un travail d'équipe physique sous le soleil.</p>
+                    </div>
+                </div>
+                <!-- 1. C2F (2022 & 2023) -->
+                <div class="timeline-card">
+                    <img src="iloveimg-converted/C2F.jpg" alt="Stagiaire C2F" class="card-img">
+                    <div class="card-content">
+                        <h3>Stagiaire Électricien</h3>
+                        <span class="company">C2F</span>
+                        <span class="date">Avril 2022 & 2023</span>
+                        <p>Électricité tertiaire et installations solaires photovoltaïques. J'ai participé au tirage de
+                            câbles et à la pose de panneaux.</p>
+                    </div>
+                </div>
+
+                <!-- 3. L'Oustal del Carlat (2023) -->
+                <div class="timeline-card">
+                    <img src="L'OUSTAL.jpg" alt="Camping L'Oustal del Carlat" class="card-img">
+                    <div class="card-content">
+                        <h3>Réceptionniste</h3>
+                        <span class="company">L'Oustal del Carlat</span>
+                        <span class="date">Été 2023</span>
+                        <p>Accueil client, gestion des arrivées/départs et encaissement en camping. Développement du
+                            relationnel client.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Vandemoortele (2023) -->
+                <div class="timeline-card">
+                    <img src="iloveimg-converted/VANDEMOORTELE.jpg" alt="Usine Vandemoortele" class="card-img">
+                    <div class="card-content">
+                        <h3>Stagiaire Maintenance</h3>
+                        <span class="company">Vandemoortele</span>
+                        <span class="date">Nov. 2023</span>
+                        <p>Maintenance préventive et curative dans une usine alimentaire. Un réel defi entre mecanique
+                            et hygene.</p>
+                    </div>
+                </div>
+
+                <!-- 4b. Château Cazalères (2024) -->
+                <div class="timeline-card">
+                    <img src="CHATEAU.jpg" alt="Château Cazalères" class="card-img">
+                    <div class="card-content">
+                        <h3>Réceptionniste & Animation</h3>
+                        <span class="company">Château Cazalères</span>
+                        <span class="date">Été 2024</span>
+                        <p>Accueil client et gestion du BBQ hebdomadaire (mercredi soir). Polyvalence et service client.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. Aubert & Duval (2024) -->
+                <div class="timeline-card">
+                    <div class="ad.jpg">PHOTO AUBERT (Manquante)</div>
+                    <div class="card-content">
+                        <h3>Stagiaire Maintenance</h3>
+                        <span class="company">Aubert & Duval</span>
+                        <span class="date">Nov. 2024</span>
+                        <p>Intervention sur équipements de traitement thermique (métallurgie). Environnement industriel
+                            exigeant.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Setei (2025) -->
+                <div class="timeline-card">
+                    <img src="iloveimg-converted/SETEI.jpg" alt="Câblage Setei" class="card-img">
+                    <div class="card-content">
+                        <h3>Stagiaire Monteur / Câbleur</h3>
+                        <span class="company">Setei</span>
+                        <span class="date">Fév. 2025</span>
+                        <p>Câblage d'armoires électriques industrielles pour des clients majeurs (SMDEA). Lecture de
+                            schémas electrique / d'implantation précis.</p>
+                    </div>
+                </div>
+
+                <!-- 7. LIDL (2025) -->
+                <div class="timeline-card">
+                    <img src="lidl.jpg" alt="LIDL" class="card-img">
+                    <div class="card-content">
+                        <h3>Équipier Polyvalent</h3>
+                        <span class="company">LIDL</span>
+                        <span class="date">Mars - Août 2025</span>
+                        <p>Job étudiant en // du BAC. Caisse, mise en rayon, boulangerie. Organisation et efficacité.
+                            requise.</p>
+                    </div>
+                </div>
+
+            </div>
+            <p style="text-align: center; margin-top: 10px; font-style: italic; color: #777;">&larr; Faites défiler vers
+                la droite pour voir tout mon parcours &rarr;</p>
+        </section>
+
         <section id="competences">
-    <h2>Mes Compétences</h2>
-    
-    <div class="competences-container">
-        
-        <div class="categorie-competence">
-            <h3>🏭 Automatisme & Contrôle</h3>
-            <ul>
-                <li><strong>Configuration TIA Portal V18</strong></li>
-                <li>Logique séquentielle (Grafcet)</li>
-                <li>Lecture de schémas d'automatisme</li>
-            </ul>
-        </div>
-        
-        <div class="categorie-competence">
-            <h3>⚡ Énergie & Électronique</h3>
-            <ul>
-                <li><strong>Habilitation Électrique B1V</strong></li>
-                <li>Circuits (Industriel & Tertiaire)</li>
-                <li>Lois fondamentales de l'électricité</li>
-                <li>Mesures & Instrumentation (Oscilloscope, Multimètre, etc.)</li>
-                <li>Électronique de puissance</li>
-            </ul>
-        </div>
+            <h2>Mes Compétences</h2>
 
-        <div class="categorie-competence">
-            <h3>💻 Informatique & Outils</h3>
-            <ul>
-                <li>WinRelais (Schémas électriques)</li>
-                <li>Programmation C sur Arduino</li>
-                <li>Rédaction de documentation technique</li>
-            </ul>
-        </div>
+            <div class="competences-container">
 
-    </div> </section>
+                <div class="categorie-competence">
+                    <h3>Logiciels & CAO</h3>
+                    <ul>
+                        <li>TIA Portal V18</li>
+                        <li>Proteus (ISIS & ARES)</li>
+                        <li>CAO 3D (CATIA, Onshape)</li>
+                        <li>C++ (Arduino)</li>
+                        <li>Développement Web (HTML / CSS)</li>
+                        <li>Pack Office</li>
+                    </ul>
+                </div>
+
+                <div class="categorie-competence">
+                    <h3>Compétences Manuelles</h3>
+                    <ul>
+                        <li>Appareille de messures (Multimètre & Oscilloscope)</strong></li>
+                        <li>Habilitation Électrique B1V</li>
+                        <li>Câblage d'armoires électriques</li>
+                        <li>Fabrication de cartes (Insolation, Gravure, Soudure)</li>
+                    </ul>
+                </div>
+
+                <div class="categorie-competence">
+                    <h3>Compétences Intellectuelles</h3>
+                    <ul>
+                        <li>Logique séquentielle (Grafcet)</li>
+                        <li>Lecture & Analyse de schémas</li>
+                        <li>Lois fondamentales de l'électricité</li>
+                        <li>Gestion de projet & Travail en équipe</li>
+                        <li>Rédaction de documentation technique</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
     </main>
 
     <footer>
-    <div class="footer-social">
-        <a href="https://www.linkedin.com/in/bram-moonen-433009344" target="_blank" class="social-icon">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        
-        <a href="mailto:bram.mnn@gmail.com" class="social-icon">
-            <i class="fa-solid fa-envelope"></i>
-        </a>
-    </div>
-    
-    <p>© 2025 - MOONEN Bram. Tous droits réservés.</p>
-</footer>
-    
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/bram-moonen-433009344" target="_blank" class="social-icon">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="mailto:bram.mnn@gmail.com" class="social-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+
+        <p>© 2025 - MOONEN Bram. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const theme = localStorage.getItem('theme');
+
+        // Appliquer le thème sauvegardé
+        if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleButton.textContent = '☀️';
+        }
+
+        // Gérer le clic
+        toggleButton.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+
+            if (currentTheme === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleButton.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleButton.textContent = '☀️';
+            }
+        });
+    </script>
+
 </body>
+
 </html>
