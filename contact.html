@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,63 +12,88 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
+    <!-- Bouton Toggle Dark Mode -->
+    <button id="theme-toggle" aria-label="Basculer le mode sombre">🌙</button>
 
     <header>
-      <nav>
-    <ul>
-        <li><a href="index.html">Accueil</a></li> 
-        <li><a href="projets.html">Mes Projets</a></li> 
-        <li><a href="contact.html">Contact</a></li> </ul>
-</nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Mes Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-   <main>
-    <section id="contact-form">
-        <h2>Me Contacter</h2>
-        <p>
-            Une question sur mes projets ou simplement envie de discuter ? 
-        <p>
-        <p>
-            Laissez-moi un message ici !
-        <p>
-    
-        <form action="https://formspree.io/f/mkgknnno" method="POST">
-            <div class="form-groupe">
-                <label for="nom">Votre Nom :</label>
-                <input type="text" id="nom" name="user_nom" required>
-            </div>
+    <main>
+        <section id="contact-form">
+            <h2>Me Contacter</h2>
+            <p>
+                Une question sur mes projets ou simplement envie de discuter ?
+            <p>
+            <p>
+                Laissez-moi un message ici !
+            <p>
 
-            <div class="form-groupe">
-                <label for="email">Votre Email :</label>
-                <input type="email" id="email" name="user_email" required>
-            </div>
+            <form action="https://formspree.io/f/mkgknnno" method="POST">
+                <div class="form-groupe">
+                    <label for="nom">Votre Nom :</label>
+                    <input type="text" id="nom" name="user_nom" required>
+                </div>
 
-            <div class="form-groupe">
-                <label for="message">Votre Message :</label>
-                <textarea id="message" name="user_message" rows="8" required></textarea>
-            </div>
+                <div class="form-groupe">
+                    <label for="email">Votre Email :</label>
+                    <input type="email" id="email" name="user_email" required>
+                </div>
 
-            <div class="form-groupe">
-                <button type="submit" class="bouton-cta">Envoyer le message</button>
-            </div>
-        </form>
-        
-    </section>
+                <div class="form-groupe">
+                    <label for="message">Votre Message :</label>
+                    <textarea id="message" name="user_message" rows="8" required></textarea>
+                </div>
+
+                <div class="form-groupe">
+                    <button type="submit" class="bouton-cta">Envoyer le message</button>
+                </div>
+            </form>
+
+        </section>
     </main>
 
-   <footer>
-    <div class="footer-social">
-        <a href="https://www.linkedin.com/in/bram-moonen-433009344" target="_blank" class="social-icon">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        
-        <a href="mailto:bram.mnn@gmail.com" class="social-icon">
-            <i class="fa-solid fa-envelope"></i>
-        </a>
-    </div>
-    <p>© 2025 - MOONEN Bram. Tous droits réservés.</p>
-</footer>
- 
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/bram-moonen-433009344" target="_blank" class="social-icon">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="mailto:bram.mnn@gmail.com" class="social-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+        <p>© 2025 - MOONEN Bram. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggleButton.textContent = '☀️';
+        }
+        toggleButton.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                toggleButton.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                toggleButton.textContent = '☀️';
+            }
+        });
+    </script>
 </body>
+
 </html>
